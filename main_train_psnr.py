@@ -201,6 +201,8 @@ def main(json_path="options/train_msrresnet_psnr.json"):
         if opt["dist"]:
             train_sampler.set_epoch(epoch)
 
+        # TODO: check if degraded imgs are generated and fed as paris
+        #   ``train_data`` already has the degraded lr as ``train_data['L']``
         for i, train_data in enumerate(train_loader):
 
             current_step += 1

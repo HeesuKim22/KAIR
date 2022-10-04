@@ -213,9 +213,6 @@ def main(json_path="options/train_msrresnet_psnr.json"):
             # -------------------------------
             # 2) feed patch pairs
             # -------------------------------
-            # TODO: check if loss is calculated by the comparison btw lr and hr <<<<<<<<<<<<<<<<<
-            #   lr is 64x64 and hr is 256x256 now
-            #   the loss should be calculated by sr-precessed lr(64x64->256x256) and GT hr(256x256)
             model.feed_data(train_data)
 
             # -------------------------------
